@@ -3,6 +3,8 @@ from collections import Counter
 with open("input.txt", 'r') as file:
     lines = file.readlines()
 
+file.close()
+
 lines = [line.strip() for line in lines]
 
 left, right = [], []

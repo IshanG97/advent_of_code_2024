@@ -38,6 +38,8 @@ def count_safe_reports(lines):
 with open('input.txt','r') as file:
     lines = file.readlines()
 
+file.close()
+
 output = count_safe_reports(lines)
 
 print(output)

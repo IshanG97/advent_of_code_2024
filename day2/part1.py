@@ -1,13 +1,4 @@
 def is_safe_report(report):
-    """
-    Determines if a report is safe according to the given rules.
-
-    Parameters:
-        report (list of int): A list of levels in the report.
-
-    Returns:
-        bool: True if the report is safe, False otherwise.
-    """
     differences = [report[i+1] - report[i] for i in range(len(report) - 1)]
 
     # Check if all differences are within the range [-3, -1] or [1, 3]
@@ -41,15 +32,6 @@ def is_safe_report(report):
 '''
 
 def count_safe_reports(lines):
-    """
-    Counts the number of safe reports in the given data.
-
-    Parameters:
-        data (list of str): List of reports, each as a space-separated string of numbers.
-
-    Returns:
-        int: The number of safe reports.
-    """
     safe_count = 0
     for line in lines:
         report = list(map(int, line.split()))
@@ -60,6 +42,8 @@ def count_safe_reports(lines):
 
 with open('input.txt','r') as file:
     lines = file.readlines()
+
+file.close()
 
 output = count_safe_reports(lines)
 
